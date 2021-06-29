@@ -1,11 +1,19 @@
 {
-  "name": "ngx-toast",
-  "version": "0.0.1",
-  "peerDependencies": {
-    "@angular/common": "^12.0.5",
-    "@angular/core": "^12.0.5"
+  "name": "@ildug/ngx-toast",
+  "version": "1.0.0",
+  "description": "angular toast, styled by Bootstrap 5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilDug/ngx-toast"
   },
-  "dependencies": {
-    "tslib": "^2.1.0"
+  "keywords": [
+    "angular",
+    "toast"
+  ],
+  "author": "ilDug",
+  "license": "MIT",
+  "peerDependencies": {
+    "animate.css": "~4.1.1",
+    "bootstrap": "~5.0.2"
   }
 }

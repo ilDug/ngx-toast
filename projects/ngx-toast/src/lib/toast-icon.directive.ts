@@ -1,10 +1,26 @@
-import { Directive } from '@angular/core';
+import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
+import { DToast } from './toast';
 
 @Directive({
-  selector: '[dagToastIcon]'
+    selector: '[toastIcon]'
 })
-export class ToastIconDirective {
+export class ToastIconDirective implements OnChanges {
 
-  constructor() { }
+    @Input('toastIcon') toast: DToast;
+
+
+    @HostBinding('class.fa-info') info: boolean
+    @HostBinding('class.fa-exclamation-triangle') warning: boolean
+    @HostBinding('class.fa-skull-crossbones') error: boolean
+
+
+    ngOnChanges() {
+        if (!this.toast) return;
+
+        const { type } = this.toast
+        this.info = type === 'info';
+        this.error = type === 'error';
+        this.warning = type === 'warning';
+    }
 
 }

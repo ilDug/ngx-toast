@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './toast.component.html',
   styleUrls: ['./toast.component.scss']
 })
-export class ToastComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class ToastComponent { }
