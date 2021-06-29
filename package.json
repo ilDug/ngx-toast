@@ -1,0 +1,45 @@
+{
+  "name": "@ildug/ngx-toast",
+  "version": "1.0.0",
+  "description": "angular toast, styled by Bootstrap 5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilDug/ngx-toast"
+  },
+  "keywords": [
+    "angular",
+    "toast"
+  ],
+  "author": "ilDug",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~12.0.4",
+    "@angular/common": "~12.0.4",
+    "@angular/compiler": "~12.0.4",
+    "@angular/core": "~12.0.4",
+    "@angular/forms": "~12.0.4",
+    "@angular/platform-browser": "~12.0.4",
+    "@angular/platform-browser-dynamic": "~12.0.4",
+    "@angular/router": "~12.0.4",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.0.2",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.1.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.0.5",
+    "@angular/cli": "~12.0.4",
+    "@angular/compiler-cli": "~12.0.4",
+    "@types/node": "^12.11.1",
+    "ng-packagr": "^12.0.0",
+    "typescript": "~4.2.3"
+  }
+}
