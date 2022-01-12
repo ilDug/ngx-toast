@@ -1,3 +1,3 @@
-<div style="position: fixed; top: 0; right: 1rem; margin:1rem;">
+<div id="toast-container">
     <toast-item *ngFor="let t of toasts" [data]="t" (close)="closeItem($event)"></toast-item>
 </div>

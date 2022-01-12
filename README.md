@@ -2,6 +2,8 @@
 
 Angular Toast, styled by Bootstrap 5
 
+ANGULAR VERSION: 13
+
 ## Installation 
 
 ```
@@ -41,7 +43,7 @@ Open a toast using the service NgxToastService.
 
 ``` typescript
 ...
-import { NgxToastService } from 'ngx-toast';
+import { NgxToastService } from '@ildug/ngx-toast';
 ...
 
 export class AppComponent {

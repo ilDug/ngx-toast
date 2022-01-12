@@ -19,6 +19,8 @@ export class AppComponent {
 
 
     open() {
-        this.toast.info("ciao,  il messaggio", 5000);
+        this.toast.info("ciao,  il messaggio", 55000);
+        this.toast.error("ciao,  lorem ipsum asd  asd ergt sfiouwiuhiubib aswd iuqwedjkhb asiukjbd ", 55000);
+        this.toast.warning("ciao,  il messaggio", 55000);
     }
 }

@@ -8,7 +8,7 @@ export class ToastDirective implements OnInit {
 
     constructor(
         private vcr: ViewContainerRef,
-        private cfr: ComponentFactoryResolver
+        // private cfr: ComponentFactoryResolver
     ) { }
 
 
@@ -18,7 +18,8 @@ export class ToastDirective implements OnInit {
 
 
     load() {
-        let cf: ComponentFactory<ToastComponent> = this.cfr.resolveComponentFactory(ToastComponent)
-        let cr: ComponentRef<ToastComponent> = this.vcr.createComponent(cf)
+        // let cf: ComponentFactory<ToastComponent> = this.cfr.resolveComponentFactory(ToastComponent)
+        // let cr: ComponentRef<ToastComponent> = this.vcr.createComponent(cf)
+        let cr: ComponentRef<ToastComponent> = this.vcr.createComponent(ToastComponent)
     }
 }

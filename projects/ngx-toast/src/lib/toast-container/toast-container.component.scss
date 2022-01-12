@@ -1,0 +1,18 @@
+#toast-container {
+    position: fixed; 
+    top: 0; 
+
+  /* da  576px in giù */
+  @media (max-width: 575.98px) {
+    right: 0rem; 
+    margin:0rem;
+    max-width: 300px;
+  }
+
+
+  /* da  576px in su */
+  @media (min-width: 576px) {
+    right: 1rem; 
+    margin:1rem;
+  }
+}
