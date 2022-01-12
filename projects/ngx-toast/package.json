@@ -14,6 +14,6 @@
   "license": "MIT",
   "peerDependencies": {
     "animate.css": "~4.1.1",
-    "bootstrap": "~5.0.2"
+    "bootstrap": "^5.1.3"
   }
 }
