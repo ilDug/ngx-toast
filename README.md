@@ -1,5 +1,7 @@
 # NgxToast
 
+[![Publish Node.js Package](https://github.com/ilDug/ngx-toast/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ilDug/ngx-toast/actions/workflows/npm-publish.yml)
+
 Angular Toast, styled by Bootstrap 5
 
 ANGULAR VERSION: 15
