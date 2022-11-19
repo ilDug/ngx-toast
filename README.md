@@ -2,7 +2,7 @@
 
 Angular Toast, styled by Bootstrap 5
 
-ANGULAR VERSION: 13
+ANGULAR VERSION: 15
 
 ## Installation 
 

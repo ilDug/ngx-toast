@@ -19,7 +19,8 @@
     ],
     "paths": {
       "ngx-toast": [
-        "projects/ngx-toast/src/public-api.ts"
+        "projects/ngx-toast/src/public-api.ts",
+        "dist/ngx-toast"
       ]
     },
     "strict": false
