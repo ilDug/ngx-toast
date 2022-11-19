@@ -1,6 +1,6 @@
 {
   "name": "@ildug/ngx-toast",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "angular toast, styled by Bootstrap 5",
   "repository": {
     "type": "git",
@@ -13,7 +13,10 @@
   "author": "ilDug",
   "license": "MIT",
   "peerDependencies": {
-    "animate.css": "^4.1.1",
-    "bootstrap": "^5.1.3"
+    "@angular/common": ">13",
+    "@angular/core": ">13"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   }
 }
