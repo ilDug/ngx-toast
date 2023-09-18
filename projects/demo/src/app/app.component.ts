@@ -3,14 +3,8 @@ import { NgxToastService } from 'ngx-toast';
 
 @Component({
   selector: 'app-root',
-  template: `
-
-<div dagToast>Prova....</div>
-
-<a  class="btn btn-primary" (click)="open()">Toast</a>
-
-  `,
-  styles: []
+  templateUrl: "./app.component.html",
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   constructor(
@@ -19,8 +13,8 @@ export class AppComponent {
 
 
   open() {
-    this.toast.info("ciao,  il messaggio", 55000);
-    this.toast.error("ciao,  lorem ipsum asd  asd ergt sfiouwiuhiubib aswd iuqwedjkhb asiukjbd ", 55000);
-    this.toast.warning("ciao,  il messaggio", 55000);
+    this.toast.info("May the Force be with you.", 55000);
+    this.toast.error("These aren't the droids you're looking for. ", 55000);
+    this.toast.warning("Do or do not. There is no try.", 55000);
   }
 }
