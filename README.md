@@ -4,7 +4,9 @@
 
 Angular Toast, styled by Bootstrap 5
 
-ANGULAR VERSION: 15
+ANGULAR VERSION: 16
+
+See [demo](https://ildug.github.io/ngx-toast/)
 
 ## Installation 
 
