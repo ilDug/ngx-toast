@@ -4,7 +4,7 @@
 
 Angular Toast, styled by Bootstrap 5
 
-ANGULAR VERSION: 16
+ANGULAR VERSION: 17
 
 See [demo](https://ildug.github.io/ngx-toast/)
 
@@ -19,18 +19,28 @@ npm i @ildug/ngx-toast
 Import the main module **NgxToastModule** in your angular project:
 
 ``` typescript
-@NgModule({
-    declarations: [
-        ...
-    ],
-    imports: [
-        ...,
-        NgxToastModule,
-        ...
-    ],
-    bootstrap: [...]
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { NgxToastModule } from 'ngx-toast';
+import { NgxToastService } from 'ngx-toast';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: "./app.component.html",
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+   imports: [CommonModule, NgxToastModule]
 })
-export class MyAppModule { }
+export class AppComponent {
+  private toast = inject(NgxToastService)
+
+
+  open() {
+    this.toast.info("May the Force be with you.", 55000);
+    this.toast.error("These aren't the droids you're looking for. ", 55000);
+    this.toast.warning("Do or do not. There is no try.", 55000);
+  }
+}
 ```
 
 The directive **dagToast** must be added  everywhere in a component into an element that is always visible. We suggest to add to the main container of the application page.
@@ -44,24 +54,6 @@ The directive **dagToast** must be added  everywhere in a component into an elem
 ``` 
 
 Open a toast using the service NgxToastService.
-
-``` typescript
-...
-import { NgxToastService } from '@ildug/ngx-toast';
-...
-
-export class AppComponent {
-    constructor(
-        private toast: NgxToastService
-    ) { }
-
-
-    open() {
-        this.toast.info("My message", 5000);
-    }
-}
-```
-
 
 NgxToastService has a main methods **create**
 

@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { NgxToastModule } from 'ngx-toast';
 import { NgxToastService } from 'ngx-toast';
 
 @Component({
   selector: 'app-root',
   templateUrl: "./app.component.html",
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+   imports: [CommonModule, NgxToastModule]
 })
 export class AppComponent {
-  constructor(
-    private toast: NgxToastService
-  ) { }
+  private toast = inject(NgxToastService)
 
 
   open() {
