@@ -14,11 +14,11 @@ import { filter } from 'rxjs';
 })
 export class ToastContainerComponent implements OnInit {
 
-  private toast$ = inject(NgxToastService)
+  private toastEmitter$ = inject(NgxToastService)
   public toasts: DToast[] = [];
 
   ngOnInit() {
-    this.toast$
+    this.toastEmitter$
       .pipe(filter(x => !!x))
       .subscribe(t => this.toasts.push(t))
   }
