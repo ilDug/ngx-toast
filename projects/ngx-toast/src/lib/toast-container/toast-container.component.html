@@ -1,3 +1,5 @@
 <div id="toast-container">
-    <toast-item *ngFor="let t of toasts" [data]="t" (close)="closeItem($event)"></toast-item>
+  @for (t of toasts; track t.id) {
+    <toast-item [data]="t" (close)="closeItem($event)"></toast-item>
+  }
 </div>

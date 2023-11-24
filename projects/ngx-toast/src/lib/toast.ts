@@ -1,4 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';;
+
 export class DToast {
+    readonly id: string;
+
     /** titolo del toasr */
     public title: string;
 
@@ -19,6 +23,7 @@ export class DToast {
 
 
     constructor(message: string, title?: string, options?: DToastOptions) {
+        this.id = uuidv4();
         this.message = message;
         this.duration = options && options.duration ? options.duration : 0;
 
