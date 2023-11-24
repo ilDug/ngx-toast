@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
 import { DToast } from './toast';
 
 @Directive({
-    selector: '[toastColor]'
+    selector: '[toastColor]',
+    standalone: true
 })
 export class ToastColorDirective implements OnChanges {
 

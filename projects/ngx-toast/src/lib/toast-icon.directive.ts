@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
 import { DToast } from './toast';
 
 @Directive({
-    selector: '[toastIcon]'
+    selector: '[toastIcon]',
+    standalone: true
 })
 export class ToastIconDirective implements OnChanges {
 
