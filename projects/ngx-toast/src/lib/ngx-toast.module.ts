@@ -4,7 +4,6 @@ import { ToastContainerComponent } from './toast-container/toast-container.compo
 import { ToastDirective } from './toast.directive';
 import { CommonModule } from '@angular/common';
 import { ToastColorDirective } from './toast-color.directive';
-import { ToastIconDirective } from './toast-icon.directive';
 
 
 
@@ -15,7 +14,6 @@ import { ToastIconDirective } from './toast-icon.directive';
         ToastContainerComponent,
         ToastDirective,
         ToastColorDirective,
-        ToastIconDirective
     ],
     exports: [
         ToastDirective,

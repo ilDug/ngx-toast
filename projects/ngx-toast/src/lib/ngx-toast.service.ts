@@ -1,26 +1,19 @@
 import { Injectable } from '@angular/core';
-import { ReplaySubject, Observable } from 'rxjs';
+import { ReplaySubject, Observable , BehaviorSubject} from 'rxjs';
 import { DToast, DToastOptions } from './toast';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NgxToastService {
+export class NgxToastService extends BehaviorSubject<DToast> {
 
-    private toasts: ReplaySubject<DToast> = new ReplaySubject(1);
-
-    /** stream dei dati dal server */
-    get toasts$(): Observable<DToast> { return this.toasts.asObservable() }
-
-
-    constructor() { }
-
+    constructor(){super(null)}
     /**
-     * genera un nuovo toast direttamente 
+     * genera un nuovo toast direttamente
      */
     public create(message: string, options?: DToastOptions) {
         const t = new DToast(message, null, options)
-        this.toasts.next(t)
+        this.next(t)
         console.log("TOAST: ", message);
         return t;
     }

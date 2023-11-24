@@ -1,26 +1,16 @@
-import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 import { DToast } from './toast';
 
 @Directive({
-    selector: '[toastColor]',
-    standalone: true
+  selector: '[toastColor]',
+  standalone: true
 })
-export class ToastColorDirective implements OnChanges {
+export class ToastColorDirective {
 
-    @Input('toastColor') toast: DToast;
+  @Input('toastColor') toast: DToast;
 
-    @HostBinding('class.text-info') info: boolean
-    @HostBinding('class.text-warning') warning: boolean
-    @HostBinding('class.text-danger') error: boolean
-
-
-    ngOnChanges() {
-        if (!this.toast) return;
-
-        const { type } = this.toast
-        this.info = type === 'info';
-        this.error = type === 'error';
-        this.warning = type === 'warning';
-    }
+  @HostBinding('class.text-info') get info(): boolean { return this.toast ? this.toast.type === 'info' : false }
+  @HostBinding('class.text-warning') get warning(): boolean { return this.toast ? this.toast.type === 'warning' : false }
+  @HostBinding('class.text-danger') get error(): boolean { return this.toast ? this.toast.type === 'error' : false }
 
 }

@@ -3,6 +3,7 @@ import { NgxToastService } from '../ngx-toast.service';
 import { DToast } from '../toast';
 import { NgFor } from '@angular/common';
 import { ToastComponent } from '../toast/toast.component';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'toast-container',
@@ -13,11 +14,13 @@ import { ToastComponent } from '../toast/toast.component';
 })
 export class ToastContainerComponent implements OnInit {
 
-  private toastService = inject(NgxToastService)
+  private toast$ = inject(NgxToastService)
   public toasts: DToast[] = [];
 
   ngOnInit() {
-    this.toastService.toasts$.subscribe(t => this.toasts.push(t))
+    this.toast$
+      .pipe(filter(x => !!x))
+      .subscribe(t => this.toasts.push(t))
   }
 
   /** chiude il toast */
