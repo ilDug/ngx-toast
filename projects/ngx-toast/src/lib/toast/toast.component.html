@@ -1,5 +1,5 @@
 <div
-  class="toast show mb-3 animate__animated"
+  class="toast show mb-3"
   [class.animate__fadeInRight]="animationIn"
   [class.animate__fadeOutRight]="animationOut"
   role="alert"
@@ -64,7 +64,6 @@
         }
         @case ("info") {
           <svg
-            *ngIf="data.type == 'info'"
             class="stack"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
@@ -94,12 +93,12 @@
       <span aria-hidden="true"></span>
     </button>
   </div>
-  <div class="toast-body position-relative">
+  <div class="toast-body ">
     <p>
       {{ data.message }}
       <small
-        class="position-absolute mb-2 me-3"
-        style="bottom: 0; right: 0"
+        class="mb-2 me-3"
+        style="position:absolute; bottom: 0; right: 0"
         [toastColor]="data"
       >
         {{ data.type }}
