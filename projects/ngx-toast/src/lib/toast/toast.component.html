@@ -38,7 +38,6 @@
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
-            style="margin-left: -26px"
           >
             <path
               fill="white"
@@ -54,7 +53,6 @@
             viewBox="0 0 576 512"
             width="20px"
             height="20px"
-            style="margin-left: -26px"
           >
             <path
               fill="white"
@@ -70,7 +68,6 @@
             viewBox="0 0 192 512"
             width="20px"
             height="20px"
-            style="margin-left: -26px"
           >
             <path
               fill="white"
@@ -81,24 +78,22 @@
       }
     </span>
 
-
-    <strong class="me-auto">{{ data.title }}</strong>
-    <small class="text-muted">{{ data.time | date }}</small>
-    <button
-      type="button"
-      class="ms-2 mb-1 btn-close"
+    <strong class="">{{ data.title }}</strong>
+    <small class="" style="margin-left:auto;">{{ data.time | date }}</small>
+    <a
+      class="btn-close"
       (click)="onClose()"
       aria-label="Close"
     >
       <span aria-hidden="true"></span>
-    </button>
+    </a>
   </div>
-  <div class="toast-body ">
+  <div class="toast-body">
     <p>
       {{ data.message }}
       <small
         class="mb-2 me-3"
-        style="position:absolute; bottom: 0; right: 0"
+        style="position: absolute; bottom: 0.5rem; right: 0.5rem;"
         [toastColor]="data"
       >
         {{ data.type }}
