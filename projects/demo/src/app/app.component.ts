@@ -15,8 +15,8 @@ export class AppComponent {
 
 
   open() {
-    this.toast.info("May the Force be with you.", 55000);
-    this.toast.error("These aren't the droids you're looking for. ", 55000);
-    this.toast.warning("Do or do not. There is no try.", 55000);
+    this.toast.info("May the Force be with you.", 550000);
+    this.toast.error("These aren't the droids you're looking for. ", 550000);
+    this.toast.warning("Do or do not. There is no try.", 550000);
   }
 }

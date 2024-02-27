@@ -1,3 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../../../node_modules/animate.css/animate.min.css";
+:root{
+  --c-main: hsl(194, 38%, 57%);
+  --c-warn: hsl(48, 100%, 67%);
+  --c-error: hsl(0, 100%, 67%);
+}
+
+
