@@ -1,7 +1,7 @@
 {
   "name": "@ildug/ngx-toast",
-  "version": "3.0.0",
-  "description": "angular toast, styled by Bootstrap 5",
+  "version": "3.2.3",
+  "description": "another angular toast",
   "repository": {
     "type": "git",
     "url": "https://github.com/ilDug/ngx-toast"

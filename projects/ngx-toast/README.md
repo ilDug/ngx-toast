@@ -2,7 +2,7 @@
 
 [![Publish Node.js Package](https://github.com/ilDug/ngx-toast/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ilDug/ngx-toast/actions/workflows/npm-publish.yml)
 
-Angular Toast, styled by Bootstrap 5
+Angular Toast
 
 ANGULAR VERSION: 17
 
@@ -49,7 +49,7 @@ The directive **dagToast** must be added  everywhere in a component into an elem
 <div dagToast>
     Main content of the application
 
-    <button  class="btn btn-primary" (click)="open()">Toast</button>
+    <button (click)="open()">Toast</button>
 </div>
 ``` 
 
