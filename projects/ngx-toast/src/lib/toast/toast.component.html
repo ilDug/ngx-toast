@@ -1,10 +1,10 @@
 <div
-  class="toast show mb-3"
+  class="toast show mb-3 animated"
   [class.animate__fadeInRight]="animationIn"
   [class.animate__fadeOutRight]="animationOut"
-  role="alert"
-  aria-live="assertive"
-  aria-atomic="true"
+  [class.b-main]="data.type === 'INFO'"
+  [class.b-warn]="data.type === 'WARNING'"
+  [class.b-error]="data.type === 'ERROR'"
 >
   <div class="toast-header">
     <span class="toast-icon me-3">
@@ -30,7 +30,7 @@
       <!-- ICONA BIANCA -->
 
       @switch (data.type) {
-        @case ("error") {
+        @case ("ERROR") {
           <svg
             width="20px"
             height="20px"
@@ -45,7 +45,7 @@
             ></path>
           </svg>
         }
-        @case ("warning") {
+        @case ("WARNING") {
           <svg
             class="stack"
             role="img"
@@ -60,7 +60,7 @@
             ></path>
           </svg>
         }
-        @case ("info") {
+        @case ("INFO") {
           <svg
             class="stack"
             role="img"

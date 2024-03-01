@@ -12,6 +12,9 @@
   border: 1px solid var(--toast-b);
   border-radius: 0.25rem;
   margin-bottom: 0.5rem;
+
+  border-left-width: 5px;
+  border-left-style: solid;
 }
 
 .toast-header {
@@ -50,6 +53,17 @@
 }
 .t-error {
   color: var(--c-error);
+}
+
+.b-main {
+  border-left-color: var(--c-main);
+}
+
+.b-warn {
+  border-left-color: var(--c-warn);
+}
+.b-error {
+  border-left-color: var(--c-error);
 }
 
 .btn-close {

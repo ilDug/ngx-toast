@@ -11,7 +11,7 @@ export class DToast {
   public message: string;
 
   /** tipo ['INFO', 'WARNING', 'ERROR'] */
-  public type: string;
+  public type: "INFO" | "WARNING" | "ERROR" ;
 
   /** data del toast */
   public time: number;
@@ -29,7 +29,7 @@ export class DToast {
     this.duration = options && options.duration ? options.duration : 0;
 
     /** imposta il tipo in base alla opzioni */
-    this.type = options && options.type ? this.validateType(options.type) : 'info';
+    this.type = options && options.type ? options.type : "INFO";
     this.title = title ? title : (this.type);
     this.time = new Date().getTime();
     return this;
@@ -42,26 +42,10 @@ export class DToast {
   }
 
 
-  public setType(type: string) {
-    this.type = this.validateType(type)
+  public setType(type: "INFO" | "WARNING" | "ERROR") {
+    this.type = type;
   }
 
-
-
-  /**
-   * valuta l'opzione type se è tra quele ammisibili
-   * @param type stringa che identifica il tipo di toast
-   */
-  public validateType(type: string): string {
-    type = type.toLowerCase();
-
-    switch (type) {
-      case 'info': return 'info';
-      case 'error': return 'error';
-      case 'warning': return 'warning';
-      default: return 'info';
-    }
-  }
 
 
 }
@@ -70,7 +54,7 @@ export class DToast {
 
 export interface DToastOptions {
   /** tipo ['INFO', 'WARNING', 'ERROR'] */
-  type?: string;
+  type?: "INFO" | "WARNING" | "ERROR"	;
 
   /** numerodi millisecondi prima di chiudersi */
   duration?: number
