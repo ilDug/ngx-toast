@@ -1,6 +1,6 @@
 {
   "name": "@ildug/ngx-toast",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "another angular toast",
   "repository": {
     "type": "git",
