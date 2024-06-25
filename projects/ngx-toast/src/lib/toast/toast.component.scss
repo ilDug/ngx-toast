@@ -1,7 +1,9 @@
-.toast {
+:root{
   --toast-c: hsl(0, 0%, 25%);
   --toast-bg: hsl(0, 0%, 100%);
   --toast-b: hsl(0, 0%, 90%);
+}
+.toast {
   width: 320px;
   max-width: 100%;
   font-size: 0.8rem;
