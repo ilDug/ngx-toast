@@ -1,7 +1,9 @@
-:root{
-  --c-main: hsl(194, 38%, 57%);
-  --c-warn: hsl(48, 100%, 67%);
-  --c-error: hsl(0, 100%, 67%);
+:root {
+    --c-main: hsl(194, 38%, 57%);
+    --c-warn: hsl(48, 100%, 67%);
+    --c-error: hsl(0, 100%, 67%);
+
+    --toast-c: hsl(0, 0%, 25%);
+    --toast-bg: hsl(0, 0%, 100%);
+    --toast-b: hsl(0, 0%, 80%);
 }
-
-

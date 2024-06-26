@@ -1,5 +1,5 @@
 <div id="toast-container">
-  @for (t of toasts; track t.id) {
+    @for (t of toasts(); track t.id) {
     <toast-item [data]="t" (close)="closeItem($event)"></toast-item>
-  }
+    }
 </div>
