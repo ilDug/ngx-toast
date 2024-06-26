@@ -79,10 +79,11 @@
     position: relative;
     cursor: pointer;
     width: var(--btn-close-size);
-
+    height: var(--btn-close-size);
+    display: block;
     margin-right: calc(-0.5 * 0.5rem);
     margin-left: 0.5rem;
-    margin-top: -2rem;
+    margin-top: -1rem;
 
     &::after,
     &::before {
