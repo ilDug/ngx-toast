@@ -4,7 +4,7 @@
 
 Angular Toast
 
-ANGULAR VERSION: 17
+ANGULAR VERSION: 18
 
 See [demo](https://ildug.github.io/ngx-toast/)
 
