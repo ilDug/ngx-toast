@@ -4,19 +4,19 @@ import { NgxToastModule } from 'ngx-toast';
 import { NgxToastService } from 'ngx-toast';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: "./app.component.html",
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-   imports: [CommonModule, NgxToastModule]
+    selector: 'app-root',
+    templateUrl: "./app.component.html",
+    styleUrls: ['./app.component.scss'],
+    standalone: true,
+    imports: [CommonModule, NgxToastModule]
 })
 export class AppComponent {
-  private toast = inject(NgxToastService)
+    private toast = inject(NgxToastService)
 
 
-  open() {
-    this.toast.info("May the Force be with you.", 550000);
-    this.toast.error("These aren't the droids you're looking for. ", 550000);
-    this.toast.warning("Do or do not. There is no try.", 550000);
-  }
+    open() {
+        this.toast.info("May the Force be with you.", 550000);
+        this.toast.error("These aren't the droids you're looking for. ", 550000);
+        this.toast.warning("Do or do not. There is no try.", 550000);
+    }
 }
