@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, effect, inject } from '@angular/core';
 import { NgxToastService } from '../ngx-toast.service';
 import { DToast } from '../toast';
 import { NgFor } from '@angular/common';
@@ -6,27 +6,25 @@ import { ToastComponent } from '../toast/toast.component';
 import { filter } from 'rxjs';
 
 @Component({
-  selector: 'toast-container',
-  templateUrl: './toast-container.component.html',
-  styleUrls: ['./toast-container.component.scss'],
-  standalone: true,
-  imports: [NgFor, ToastComponent]
+    selector: 'toast-container',
+    templateUrl: './toast-container.component.html',
+    styleUrls: ['./toast-container.component.scss'],
+    standalone: true,
+    imports: [NgFor, ToastComponent]
 })
-export class ToastContainerComponent implements OnInit {
+export class ToastContainerComponent {
 
-  private toastEmitter$ = inject(NgxToastService)
-  public toasts: DToast[] = [];
+    toasts = inject(NgxToastService).toasts
 
-  ngOnInit() {
-    this.toastEmitter$
-      .pipe(filter(x => !!x))
-      .subscribe(t => this.toasts.push(t))
-  }
 
-  /** chiude il toast */
-  public closeItem(item) {
-    const i = this.toasts.indexOf(item);
-    if (i > -1) this.toasts.splice(i, 1);
-  }
+    /** chiude il toast */
+    public closeItem(item: DToast) {
+
+        this.toasts.update(toasts => {
+            const i = toasts.indexOf(item);
+            if (i > -1) toasts.splice(i, 1);
+            return [...toasts]
+        })
+    }
 
 }

@@ -1,33 +1,33 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { ReplaySubject, Observable, BehaviorSubject } from 'rxjs';
 import { DToast, DToastOptions } from './toast';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
-export class NgxToastService extends BehaviorSubject<DToast> {
-
-  constructor() { super(null) }
-  /**
-   * genera un nuovo toast direttamente
-   */
-  public create(message: string, options?: DToastOptions) {
-    const t = new DToast(message, null, options)
-    this.next(t)
-    console.log("TOAST: ", message);
-    return t;
-  }
+export class NgxToastService {
 
 
-  public info(message: string, duration?: number) {
-    this.create(message, { duration: duration, type: "INFO" })
-  }
+    toasts = signal<DToast[]>([]);
 
-  public error(message: string, duration?: number) {
-    this.create(message, { duration: duration, type: "ERROR" })
-  }
+    /**
+     * genera un nuovo toast direttamente
+     */
+    public create(message: string, options?: DToastOptions): void {
+        const t = new DToast(message, null, options)
+        this.toasts.update(toasts => [...toasts, t])
+    }
 
-  public warning(message: string, duration?: number) {
-    this.create(message, { duration: duration, type: "WARNING" })
-  }
+
+    public info(message: string, duration?: number) {
+        this.create(message, { duration: duration, type: "INFO" })
+    }
+
+    public error(message: string, duration?: number) {
+        this.create(message, { duration: duration, type: "ERROR" })
+    }
+
+    public warning(message: string, duration?: number) {
+        this.create(message, { duration: duration, type: "WARNING" })
+    }
 }
