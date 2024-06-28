@@ -55,7 +55,7 @@ jobs:
         with:
           # Upload the build dist directory (DAG)
           # set the dist destination folder (where angular puts the built files)
-          path: "./dist/demo/"
+          path: "./dist/demo/browser/"
 
       - name: Deploy to GitHub Pages
         id: deployment
